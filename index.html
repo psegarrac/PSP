@@ -1,3 +1,22 @@
-<html>
-  <h1>Esto es una prueba</h1>
-</html>
+---
+layout: default
+title: Apuntes Programación de Servicios y Procesos.
+---
+<h1>Programación de Servicios y Procesos</h1>        
+
+</ol>
+    <h2>Tema 1 - Introducción</h2>
+    <blockquote>
+      En esta parte del módulo crearemos el entorno necesario que usaremos durante el resto del curso, 
+      así como aprenderemos los conceptos básicos que nos servirán para empezar a familiarizarnos con el término
+       <strong>Programación de Servicios y Procesos</strong>
+    </blockquote>
+
+<ol class='portada'> 
+  {% for post in site.posts reversed %}
+    {% if post.categories contains "tema1" %}
+      <li><h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h4></li>
+    {% endif %}
+{% endfor %}
+</ol>
+
